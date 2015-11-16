@@ -6,7 +6,20 @@
 requirejs.config({
     baseUrl: 'lib',
     paths: {
-        app: '../app'
+        app: '../app',
+        d3: "http://d3js.org/d3.v3.min",
+        Hexlib: "_compiled_hexlib"
+    },
+    shim: {
+        // original from http://www.redblobgames.com/grids/hexagons/_compiled_hexlib.js
+        'Hexlib': {
+            // no deps:
+            exports: 'Hexlib'
+        },
+        'hexagons' : {
+            // no deps:
+            exports: 'hexagons'
+        }
     }
 });
 

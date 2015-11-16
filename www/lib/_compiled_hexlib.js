@@ -1,7 +1,9 @@
-define (function () {
-	/* function (console, $hx_exports) { */
-	"use strict";
-var Cube = function(x,y,z) {
+/* (function (console, $hx_exports) { */ 
+"use strict";
+// var $hx_exports = {};
+// $hx_exports.Hex = function(q,r) {};
+
+var Cube = /* $hx_exports.Cube = */ function(x,y,z) {
 	this.x = x;
 	this.y = y;
 	this.z = z;
@@ -44,7 +46,7 @@ Cube.prototype = {
 		return this.x == other.x && this.y == other.y && this.z == other.z;
 	}
 };
-var FractionalCube = function(x,y,z) {
+var FractionalCube = /* $hx_exports.FractionalCube = */ function(x,y,z) {
 	this.x = x;
 	this.y = y;
 	this.z = z;
@@ -81,7 +83,7 @@ FractionalCube.prototype = {
 		return "#{" + this.v().join(",") + "}";
 	}
 };
-var Grid = function(scale,orientation,shape) {
+var Grid = /* $hx_exports.Grid = */ function(scale,orientation,shape) {
 	this.scale = scale;
 	this.orientation = orientation;
 	this.hexes = shape;
@@ -235,7 +237,7 @@ Grid.prototype = {
 		return points;
 	}
 };
-var Hex = function(q,r) {
+var Hex = /* $hx_exports.Hex = */ function(q,r) {
 	this.q = q;
 	this.r = r;
 };
@@ -262,7 +264,7 @@ Lambda.array = function(it) {
 	}
 	return a;
 };
-var ScreenCoordinate = function(x,y) {
+var ScreenCoordinate = /* $hx_exports.ScreenCoordinate = */ function(x,y) {
 	this.x = x;
 	this.y = y;
 };
@@ -328,4 +330,4 @@ if(Array.prototype.map == null) Array.prototype.map = function(f) {
 Cube.directions = [new Cube(1,-1,0),new Cube(1,0,-1),new Cube(0,1,-1),new Cube(-1,1,0),new Cube(-1,0,1),new Cube(0,-1,1)];
 Cube.diagonals = [new Cube(2,-1,-1),new Cube(1,1,-2),new Cube(-1,2,-1),new Cube(-2,1,1),new Cube(-1,-1,2),new Cube(1,-2,1)];
 Grid.SQRT_3_2 = Math.sqrt(3) / 2;
-});/*(typeof console != "undefined" ? console : {log:function(){}}, typeof window != "undefined" ? window : exports);*/
+/* })(typeof console != "undefined" ? console : {log:function(){}}, typeof window != "undefined" ? window : exports); */
