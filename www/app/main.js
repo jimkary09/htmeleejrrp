@@ -14,50 +14,50 @@ define(function (require) {
 //    var cubes = Grid.trapezoidalShape(0, 14, 0, 14, Grid.twoAxisToCube);
     var cubes = [];
     
-    for (var y = 11; y <= 14; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(0,y)));
-    }
-    for (var y = 8; y <= 14; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(1,y)));
-    }
-    for (var y = 7; y <= 13; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(2,y)));
-    }
-    for (var y = 7; y <= 13; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(3,y)));
-    }
-    for (var y = 6; y <= 12; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(4,y)));
-    }
-    for (var y = 5; y <= 11; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(5,y)));
-    }
-    for (var y = 5; y <= 11; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(6,y)));
-    }
-    for (var y = 4; y <= 10; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(7,y)));
-    }
-    for (var y = 3; y <= 9; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(8,y)));
-    }
-    for (var y = 3; y <= 9; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(9,y)));
-    }
-    for (var y = 2; y <= 8; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(10,y)));
+    for (var y = 4; y <= 7; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(-7,y)));
     }
     for (var y = 1; y <= 7; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(11,y)));
-    }
-    for (var y = 1; y <= 7; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(12,y)));
+        cubes.push(Grid.twoAxisToCube(new Hex(-6,y)));
     }
     for (var y = 0; y <= 6; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(13,y)));
+        cubes.push(Grid.twoAxisToCube(new Hex(-5,y)));
     }
-    for (var y = 0; y <= 3; y++){
-        cubes.push(Grid.twoAxisToCube(new Hex(14,y)));
+    for (var y = 0; y <= 6; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(-4,y)));
+    }
+    for (var y = -1; y <= 5; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(-3,y)));
+    }
+    for (var y = -2; y <= 4; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(-2,y)));
+    }
+    for (var y = -2; y <= 4; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(-1,y)));
+    }
+    for (var y = -3; y <= 3; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(0,y)));
+    }
+    for (var y = -4; y <= 2; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(1,y)));
+    }
+    for (var y = -4; y <= 2; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(2,y)));
+    }
+    for (var y = -5; y <= 1; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(3,y)));
+    }
+    for (var y = -6; y <= 0; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(4,y)));
+    }
+    for (var y = -6; y <= 0; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(5,y)));
+    }
+    for (var y = -7; y <= -1; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(6,y)));
+    }
+    for (var y = -7; y <= -4; y++){
+        cubes.push(Grid.twoAxisToCube(new Hex(7,y)));
     }
     
     // console.log(" cubes length " + cubes.length);
@@ -71,8 +71,8 @@ define(function (require) {
     // console.log(" cubes length " + cubes.length);
 
     ui.makeGridDiagram(d3.select('#mainGrid'), cubes)
-        .addHexCoordinates(Grid.cubeToTwoAxis, true)
-        .update(40, false);
+         .addHexCoordinates(Grid.cubeToTwoAxis, true)
+         .update(50, false);
         
         
     // makeGridDiagram(d3.select('#grid-offset-even-q'),
