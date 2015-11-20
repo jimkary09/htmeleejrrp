@@ -72,7 +72,7 @@ define(function (require) {
 
     ui.makeGridDiagram(d3.select('#mainGrid'), cubes)
          .addHexCoordinates(Grid.cubeToTwoAxis, true)
-         .update(50, false);
+         .update(100, false);
         
         
     // makeGridDiagram(d3.select('#grid-offset-even-q'),
